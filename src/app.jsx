@@ -2,8 +2,6 @@ import React, {Component, Fragment} from 'react';
 import Button from "./button/button";
 import styles from './styles/main.scss';
 import FancyButton from "./fancy-button/fancy-button";
-// Import bootstrap css
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
