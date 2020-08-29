@@ -3,8 +3,6 @@ import Button from "./button/button";
 import styles from './styles/main.scss';
 import FancyButton from "./fancy-button/fancy-button";
 
-
-
 const content = 'Hello world!';
 
 const App = () => (
