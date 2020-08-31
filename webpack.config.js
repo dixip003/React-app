@@ -69,5 +69,6 @@ module.exports = {
     contentBase: DIST_DIR,
     hot: true,
     port: 9000
-  }
+  },
+  devtool: "source-map"
 };
