@@ -1,18 +1,18 @@
-import { ContextComponent } from './components/context/ContextComp';
-import { CallbackComp } from './components/useCallback/CallbackComp';
-import { Form } from './components/useImperativeHandle/Form';
-import { ReducerComp } from './components/useReducer/ReducerComp'
-import './App.css';
+import React from "react";
+import { Provider } from "react-redux";
+import ListTodo from "./ListTodo";
+import store from "./store";
 
-// tutorial link for all hooks code
-// https://github.com/cosdensolutions/code/tree/master/videos/long/learn-react-hooks-useReducer
+console.log(store.getState());
 
-export const App = () => {
+export default function App() {
   return (
-    <div className="App">
-      {/* <ContextComponent />
-      <CallbackComp /> */}
-      <ReducerComp />
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <h1>Hello CodeSandbox</h1>
+        <h2>Start editing to see some magic happen!</h2>
+        <ListTodo />
+      </div>
+    </Provider>
   );
-};
+}
