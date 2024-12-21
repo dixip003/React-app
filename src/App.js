@@ -7,8 +7,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <h1>Hello CodeSandbox</h1>
-        <h2>Start editing to see some magic happen!</h2>
+        <h2>Click below button to get list of user details!</h2>
         <ListTodo />
       </div>
     </Provider>
