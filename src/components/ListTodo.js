@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { sagaActions } from "../sagas/sagaActions";
 
-export default function () {
+export const ListTodo = () => {
   const dispatch = useDispatch();
   const todos = useSelector(state => state.todo.todos);
 

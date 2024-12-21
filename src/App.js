@@ -1,6 +1,6 @@
 import React from "react";
 import { Provider } from "react-redux";
-import ListTodo from "./components/ListTodo";
+import { ListTodo } from "./components/ListTodo";
 import store from "./redux/store";
 
 export default function App() {
