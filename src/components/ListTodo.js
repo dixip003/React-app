@@ -1,16 +1,22 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { sagaActions } from "./sagaActions";
+import { sagaActions } from "../sagas/sagaActions";
 
 export default function () {
   const dispatch = useDispatch();
   const todos = useSelector(state => state.todo.todos);
 
-  console.log(todos);
-
   const renderList = () => {
     return todos?.users?.map(todo => {
-      return <p key={todo.id}>{todo.email}</p>;
+      return (
+        <ul key={`${todo.id}_ul`}>
+          <li key={`${todo.id}_li`}>
+            <p key={`${todo.id}_first-name`}>first Name: {todo.firstName}</p>
+            <p key={`${todo.id}_last-name`}>last name: {todo.lastName}</p>
+            <p key={`${todo.id}_email`}>Email: {todo.email}</p>
+          </li>
+        </ul>
+      );
     });
   };
 

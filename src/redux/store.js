@@ -1,32 +1,16 @@
 import {
-  createSlice,
   configureStore,
 } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
-import saga from "./saga";
-
-const todoSlice = createSlice({
-  name: "todo",
-  initialState: {
-    todos: []
-  },
-  reducers: {
-    fetchData: (state, action) => {
-      return {
-        todos: action.payload
-      };
-    }
-  }
-});
-
-export const { fetchData } = todoSlice.actions;
+import todosReducer from './features/todos/todosSlice'
+import saga from "../sagas/saga";
 
 let sagaMiddleware = createSagaMiddleware();
 const middleware = (getDefaultMiddleware) => [...getDefaultMiddleware(), sagaMiddleware]
 
 const store = configureStore({
   reducer: {
-    todo: todoSlice.reducer
+    todo: todosReducer
   },
   middleware
 });
